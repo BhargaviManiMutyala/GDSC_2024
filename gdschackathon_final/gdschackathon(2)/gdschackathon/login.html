@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcedda;
+            background-image: url('background1.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #2F3C7E;
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            background-color: #2F3C7E;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #1d264c; /* Change color on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="return validate()" >
+            <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="Enter your mobile number">
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            <label for="officialCheckbox"> I am a secretary or higher official</label>
+            <input type="checkbox" id="officialCheckbox" name="officialCheckbox" >
+            <script>
+                const checkbox = document.getElementById('officialCheckbox');
+                const occupationInput = document.getElementById('occupation');
+        
+                checkbox.addEventListener('change', function () {
+                    occupationInput.style.display = this.checked ? 'block' : 'none';
+                });
+            </script>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="script2.js"></script>
+</body>
+
+</html>

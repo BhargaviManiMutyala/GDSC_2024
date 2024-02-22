@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background1.jpg');
+            background-color: #fcedda;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #2F3C7E;
+            width: 300px;
+            text-align: center;
+        }
+
+        .signup-container input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .signup-container button {
+            background-color: #2F3C7E;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background-color: #1d264c; /* Change color on hover */
+        }
+        .signup-container .checkbox-container {
+            display: flex;
+            align-items: left;
+            justify-content: flex-start;
+            margin-top: 15px;
+        }
+
+        .signup-container label {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form onsubmit="return validate()" method="post">
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="Enter your phone number">
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}" placeholder="Enter your 6-digit pincode">
+            <label for="officialCheckbox"> I am a secretary or higher official</label>
+            <input type="checkbox" id="officialCheckbox" name="officialCheckbox" >
+            <script>
+                const checkbox = document.getElementById('officialCheckbox');
+                const occupationInput = document.getElementById('occupation');
+        
+                checkbox.addEventListener('change', function () {
+                    occupationInput.style.display = this.checked ? 'block' : 'none';
+                });
+            </script>
+            <button type="submit">Signup</button>
+            <script src="script.js"></script>
+        </form>
+    </div>
+
+</body>
+
+</html>

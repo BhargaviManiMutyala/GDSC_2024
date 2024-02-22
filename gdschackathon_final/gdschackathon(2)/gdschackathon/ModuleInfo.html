@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2F3C7E;
+            background-image: url('background1.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .doc-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ffffff;
+            width: 1000px;
+            height: 400px;
+            font-size: 15px; /* Increase font size */
+        }
+
+        .doc-container input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .doc-container button {
+            background-color: #2F3C7E;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 10px;
+
+        }
+        .doc-container button:hover {
+            background-color: #1d264c; /* Change color on hover */
+        }
+    </style>
+</head>
+
+<body>
+        
+    <div class="doc-container">
+        
+        <p><b>DRAINAGE PROBLEM:</b></p>
+        <p>
+            <br>
+            <b>Problem:</b>
+            <div id="displayData1"></div>
+            <script>
+                var storedData = localStorage.getItem('myData1');
+                if (storedData) {
+                    document.getElementById('displayData1').innerText = storedData;
+                } else {
+                    document.getElementById('displayData1').innerText = 'No data found in local storage.';
+                }
+            </script>
+            <b>Address:</b>
+            <br>
+            <div id="displayData2"></div>
+            <script>
+                var storedData = localStorage.getItem('myData2');
+                if (storedData) {
+                    document.getElementById('displayData2').innerText = storedData;
+                } else {
+                    document.getElementById('displayData2').innerText = 'No data found in local storage.';
+                }
+            </script>
+            <div>
+                <br><br><button class="module" onclick="window.location.href='admin.html'">Approved</button>
+                <button class="module" onclick="window.location.href='admin.html'">Completed</button><br><br>
+            </div>
+            <button style="color: white;" onclick="window.location.href='admin.html'" >Back</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Interface</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 40px;
+            border: 1px solid #ccc;
+        }
+
+        #logo {
+            width: 150px;
+            height: 150px;
+
+            /* Replace the URL with your logo image */
+            background: url('logo.png') center/cover no-repeat;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        #modules {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .module {
+            width: 100%;
+            height: 80px;
+            background-color: #2F3C7E;
+            padding: 0px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .module:hover {
+            background-color: #1d264c;
+        }
+
+        main {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        th{
+            font-size:28px;
+            background-color: #f2f2f2;
+        }
+
+        #submitForm {
+            margin-top: 20px;
+            width: 300px;
+            max-width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #submitButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #2F3C7E;
+            color: #fff;
+        }
+        input[type="text"] {
+            width: 100%;
+            height: 50px; /* Set the initial height as needed */
+        }
+    </style>
+</head>
+<body>
+
+
+<table class="table table-borderless">
+    <tr>
+        <th>
+            <div id="logo"></div>
+        </th>
+        <th >
+            COMMUNE-LINK
+            <nav>
+                <a href="Userpage.html">Home</a>
+                <a href="homepage.html">Logout</a>
+            </nav>
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="2" >
+            <div id="modules"  >
+                <button class="module" onclick="window.location.href='Userpage.html'">Steps</button>
+                <button class="module" onclick="window.location.href='problem.html'">DRAINAGE PROBLEMS</button>
+                <button class="module" onclick="window.location.href='problem.html'">GARBAGE PROBLEMS</button>
+                <button class="module" onclick="window.location.href='problem.html'">ELECTRICITY PROBLEMS</button>
+                <button class="module" onclick="window.location.href='problem.html'">WATER PROBLEMS</button>
+                <button class="module" onclick="window.location.href='problem.html'">REVENUE PROBLEMS</button>
+            </div>
+        </td>
+        <td>
+            <main>
+                <img src="1.jpg" alt="step 1" width="700" height="400">
+                <img src="2.jpg" alt="step 2" width="700" height="400">
+                <img src="3.jpg" alt="step 3" width="700" height="400">
+                <img src="4.jpg" alt="step 4" width="700" height="400">
+            </main>
+        </td>
+    </tr>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
